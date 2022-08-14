@@ -1,0 +1,15 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+main {
+  margin-top: 1rem;
+  @include flex(0rem, column, center, center);
+  margin-bottom: 4rem;
+
+  @include mq(large) {
+    padding-inline: 8rem;
+    @include flex(1rem, row, space-between, center);
+    max-width: min(100%, 85rem);
+    margin: 0 auto;
+  }
+}

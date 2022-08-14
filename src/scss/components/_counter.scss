@@ -1,0 +1,14 @@
+@use "../utilities/flow" as *;
+
+#counter {
+  @include flex(1rem, row, space-between, center);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+}
+
+#plus,
+#minus {
+  &:hover {
+    opacity: 0.8;
+  }
+}

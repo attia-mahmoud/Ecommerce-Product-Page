@@ -1,0 +1,71 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+#carousel {
+  position: relative;
+
+  @include mq(large) {
+    max-width: min(30rem, 40%);
+  }
+}
+
+#carousel__image__container {
+  @include flex(0, row, flex-start, center);
+  transition: all 300ms ease-in-out;
+
+  @include mq(large) {
+    max-width: 35rem;
+
+    img:not(:first-child) {
+      display: none;
+    }
+    img {
+      border-radius: 20px;
+    }
+  }
+}
+
+#carousel_thumbnails_container {
+  @include flex(1rem, row, space-between, center);
+  margin-top: 2rem;
+  img {
+    width: clamp(4rem, 6vw, 5.5rem);
+    border-radius: 15px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  display: none;
+  @include mq(large) {
+    display: flex;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 0.7rem 0.9rem;
+  background-color: white;
+  border-radius: 50%;
+
+  @include mq(large) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#previous {
+  left: 1rem;
+  display: none;
+}
+
+#next {
+  right: 1rem;
+}
+
+.selected_thumbnail {
+  opacity: 0.6;
+  outline: 3px solid rgba(255, 145, 2, 1);
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="scss/main.scss" />
+    <script src="./scripts/script.js" defer></script>
+  </head>
+  <body class="ff-kumbh-sans">
+    <header>
+      <div id="metadata">
+        <img
+          src="./assets/images/icon-menu.svg"
+          alt="icon menu"
+          id="icon-open"
+          class="pointer"
+        />
+        <img src="./assets/images/logo.svg" alt="logo" />
+        <nav>
+          <img
+            src="./assets/images/icon-close.svg"
+            alt="icon-close"
+            id="icon-close"
+            class="pointer"
+          />
+          <ul id="header-links" class="fw-700 fs-500">
+            <li class="nav-link">Collections</li>
+            <li class="nav-link">Men</li>
+            <li class="nav-link">Women</li>
+            <li class="nav-link">About</li>
+            <li class="nav-link">Contact</li>
+          </ul>
+        </nav>
+      </div>
+      <div id="cart">
+        <p class="fw-700 fs-500">Cart</p>
+        <div id="break" class="bg-neutral-blue-gray"></div>
+        <div id="cart__content" class="center_content">
+          <p
+            id="cart_empty__message"
+            class="fw-700 text-neutral-blue-gray-dark"
+          >
+            Your cart is empty.
+          </p>
+          <div id="cart_item">
+            <img
+              src="./assets/images/image-product-1-thumbnail.jpg"
+              alt="product image"
+              id="cart_item__image"
+            />
+            <div class="cart_item__description">
+              <p id="cart_item__title">Autumn Limited Edition Sneakers</p>
+              <p>
+                $125.00 x <span id="item_count"></span>
+                <span id="cart_total" class="fw-700"></span>
+              </p>
+            </div>
+            <img
+              src="./assets/images/icon-delete.svg"
+              alt="delete"
+              class="pointer"
+              id="cart_delete__button"
+            />
+          </div>
+          <button
+            id="cart_checkout__button"
+            class="pointer fw-700 text-neutral-white fs-400 bg-primary-orange letter-spacing-5"
+          >
+            Checkout
+          </button>
+        </div>
+      </div>
+      <div id="user-info">
+        <div id="cart__icon">
+          <span
+            class="text-neutral-white bg-primary-orange fs-100"
+            id="cart__notification"
+          ></span>
+          <img src="./assets/images/icon-cart.svg" alt="cart" class="pointer" />
+        </div>
+        <img
+          src="./assets/images/image-avatar.png"
+          alt="avatar"
+          id="avatar"
+          class="pointer"
+        />
+      </div>
+    </header>
+    <main>
+      <section id="carousel">
+        <div id="carousel__image__container" class="pointer">
+          <img
+            class="carousel__image"
+            src="./assets/images/image-product-1.jpg"
+            alt="product image"
+          />
+          <img
+            class="carousel__image"
+            src="./assets/images/image-product-2.jpg"
+            alt="product image"
+          />
+          <img
+            class="carousel__image"
+            src="./assets/images/image-product-4.jpg"
+            alt="product image"
+          />
+          <img
+            class="carousel__image"
+            src="./assets/images/image-product-3.jpg"
+            alt="product image"
+          />
+        </div>
+        <div id="carousel_thumbnails_container">
+          <img
+            src="./assets/images/image-product-1-thumbnail.jpg"
+            alt="thumbnail"
+            class="carousel_thumbnail selected_thumbnail pointer"
+            data-id="0"
+          />
+          <img
+            src="./assets/images/image-product-2-thumbnail.jpg"
+            alt="thumbnail"
+            class="carousel_thumbnail pointer"
+            data-id="1"
+          />
+          <img
+            src="./assets/images/image-product-3-thumbnail.jpg"
+            alt="thumbnail"
+            class="carousel_thumbnail pointer"
+            data-id="3"
+          />
+          <img
+            src="./assets/images/image-product-4-thumbnail.jpg"
+            alt="thumbnail"
+            class="carousel_thumbnail pointer"
+            data-id="2"
+          />
+        </div>
+        <img
+          src="./assets/images/icon-previous.svg"
+          alt="previous"
+          id="previous"
+          class="arrow"
+        />
+        <img
+          src="./assets/images/icon-next.svg"
+          alt="next"
+          id="next"
+          class="arrow"
+        />
+      </section>
+      <div id="content">
+        <section id="info">
+          <p
+            class="text-primary-orange fw-700 fs-200 uppercase letter-spacing-5"
+          >
+            Sneaker Company
+          </p>
+          <h1 class="fw-700 fs-900 line-height-5">
+            Fall Limited Edition Sneakers
+          </h1>
+          <p class="text-neutral-blue-gray-dark fs-400 fw-500">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div id="price">
+            <div id="current-price">
+              <p class="fs-800 fw-700">$125.00</p>
+              <p
+                id="discount"
+                class="text-primary-orange fw-700 fs-500 bg-primary-orange-pale"
+              >
+                50%
+              </p>
+            </div>
+            <p class="text-neutral-blue-gray fw-700 strike-through">$250.00</p>
+          </div>
+        </section>
+        <section id="purchase">
+          <div id="counter" class="bg-neutral-blue-gray-light">
+            <img
+              src="./assets/images/icon-minus.svg"
+              alt="minus"
+              class="pointer"
+              id="minus"
+            />
+            <p class="fw-700 fs-500" id="count">0</p>
+            <img
+              src="./assets/images/icon-plus.svg"
+              alt="plus"
+              class="pointer"
+              id="plus"
+            />
+          </div>
+          <button
+            id="add_to_cart__button"
+            class="pointer fw-700 text-neutral-white fs-400 bg-primary-orange letter-spacing-5"
+          >
+            <img
+              class="text-neutral-white"
+              src="./assets/images/icon-cart.svg"
+              alt="cart"
+            />
+            Add to cart
+          </button>
+        </section>
+      </div>
+    </main>
+    <div id="modal">
+      <section id="modal-content">
+        <img
+          src="./assets/images/icon-close.svg"
+          alt="icon-close"
+          id="modal_icon-close"
+          class="pointer"
+        />
+        <div id="carousel__image__container" class="modal-images">
+          <img
+            class="carousel__image"
+            src="./assets/images/image-product-1.jpg"
+            alt="product image"
+          />
+          <img
+            class="carousel__image"
+            src="./assets/images/image-product-2.jpg"
+            alt="product image"
+          />
+          <img
+            class="carousel__image"
+            src="./assets/images/image-product-3.jpg"
+            alt="product image"
+          />
+          <img
+            class="carousel__image"
+            src="./assets/images/image-product-4.jpg"
+            alt="product image"
+          />
+        </div>
+        <div id="carousel_thumbnails_container">
+          <img
+            src="./assets/images/image-product-1-thumbnail.jpg"
+            alt="thumbnail"
+            class="modal_carousel_thumbnail modal_selected_thumbnail pointer"
+            data-id="0"
+          />
+          <img
+            src="./assets/images/image-product-2-thumbnail.jpg"
+            alt="thumbnail"
+            class="modal_carousel_thumbnail pointer"
+            data-id="1"
+          />
+          <img
+            src="./assets/images/image-product-4-thumbnail.jpg"
+            alt="thumbnail"
+            class="modal_carousel_thumbnail pointer"
+            data-id="2"
+          />
+          <img
+            src="./assets/images/image-product-3-thumbnail.jpg"
+            alt="thumbnail"
+            class="modal_carousel_thumbnail pointer"
+            data-id="3"
+          />
+        </div>
+        <img
+          src="./assets/images/icon-previous.svg"
+          alt="previous"
+          id="modal_previous"
+          class="modal_arrow"
+        />
+        <img
+          src="./assets/images/icon-next.svg"
+          alt="next"
+          id="modal_next"
+          class="modal_arrow"
+        />
+      </section>
+    </div>
+  </body>
+</html>

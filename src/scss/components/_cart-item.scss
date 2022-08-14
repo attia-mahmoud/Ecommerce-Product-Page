@@ -1,0 +1,19 @@
+@use "../utilities/flow" as *;
+
+#cart_item {
+  @include flex(2rem, row, center, center);
+  display: none;
+
+  #cart_item__image {
+    max-width: 3rem;
+    border-radius: 5px;
+  }
+
+  #cart_item__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 32vw;
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+#price {
+  width: 100%;
+  margin-top: 0.5rem;
+  @include flex(1rem, row, space-between, center);
+
+  @include mq(large) {
+    @include flex(0rem, column, space-between, flex-start);
+  }
+}
+
+#current-price {
+  @include flex(1rem, row, space-between, center);
+}
+
+#discount {
+  padding: 0.1rem 0.5rem;
+  border-radius: 8px;
+}

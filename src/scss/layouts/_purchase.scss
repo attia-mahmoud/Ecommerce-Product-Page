@@ -1,0 +1,19 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+#purchase {
+  width: 100%;
+  @include flex(1.2rem, column, flex-start, stretch);
+
+  @include mq(large) {
+    @include flex(1.5rem, row, flex-start, stretch);
+
+    button {
+      width: 65%;
+    }
+
+    #counter {
+      width: 35%;
+    }
+  }
+}

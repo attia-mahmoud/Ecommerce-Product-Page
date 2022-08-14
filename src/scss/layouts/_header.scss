@@ -1,0 +1,34 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+header {
+  position: relative;
+  @include flex(1rem, row, space-between, center);
+  margin: 1rem 1.5rem;
+
+  #metadata {
+    @include flex(1rem, row, center, flex-end);
+  }
+
+  #user-info {
+    @include flex(1.5rem, row, center, center);
+  }
+  @include mq(large) {
+    margin: 0.5rem 15%;
+    border-bottom: 1px solid var(--clr-neutral-blue-gray);
+    padding-bottom: 2rem;
+
+    #icon-close,
+    #icon-open {
+      display: none;
+    }
+
+    #metadata {
+      @include flex(4rem, row, center, center);
+    }
+
+    #user-info {
+      @include flex(3rem, row, center, center);
+    }
+  }
+}

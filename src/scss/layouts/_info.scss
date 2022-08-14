@@ -1,0 +1,5 @@
+@use "../utilities/flow" as *;
+
+#info {
+  @include flex(1rem, column, center, flex-start);
+}
